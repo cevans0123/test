@@ -1,0 +1,65 @@
+@using Ideas.Models
+@model Ideas.Models.Idea
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bright Ideas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+            overflow: hidden;
+            margin: 0px 0px 15px 0px;
+        }
+        li {
+            float: right;
+            display: block;
+            padding: 8px;
+            background-color: lightcyan;
+        }
+        #post {
+            margin: 0px 30px 15px 0px;
+            border: 2px solid black;
+            padding: 10px;
+            width: 500px;
+            display: inline-block;
+        }
+        form {
+            margin: 0px 0px 20px 0px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="container">
+    <div id="navbar">
+        <ul>
+            <li><a href="/logout">Logout</a></li>
+            <li>Hi @ViewBag.CurrUser</li>
+        </ul>
+    </div>
+    <form asp-controller="User" asp-action="Add" method="POST">
+        <label asp-for="Post"></label>
+        <input asp-for="Post" />
+        <span asp-validation-for="Post"></span>
+        <input type="submit" name="Idea">
+    </form>
+    
+    @foreach(var post in ViewBag.AllIdeas)
+        {
+            <div id="post">
+                <p><a href="/users/@post.User.UserId">@post.User.Alias</a> says, "@post.Post"</p>
+                <p><a href="/like/@post.IdeaId">Like</a> &nbsp; <a href="/bright_ideas/@post.IdeaId">@post.Participants.Count people</a> like this</p>
+                @if(@post.UserId == @ViewBag.SessionId)
+                {
+                    <p><a href="/delete/@post.IdeaId">Delete</a></p>
+                }
+            </div>
+        }
+
+</div>
+</body>

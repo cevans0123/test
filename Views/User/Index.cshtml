@@ -1,0 +1,81 @@
+@model Ideas.Models.User
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login & Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #container {
+            padding: 0px;
+            margin: 0px;
+            font-family: 'Lucida Sans';
+        }
+        span {
+            color: red;
+        }
+        #left {
+            padding: 0px 10px 10px 5px;
+            width: 48%;
+            display: inline-block;
+        }
+        #right {
+            padding: 0px 10px 10px 5px;
+            width: 250px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        form {
+            border: 5px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="container">
+    <h1>Welcome</h1>
+    <div id="left">
+        <h1>Registration</h1>
+        <form asp-controller="User" asp-action="Register" method="POST">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" />
+            <span asp-validation-for="Name"></span>
+            <br>
+            <label asp-for="Alias"></label>
+            <input asp-for="Alias" />
+            <span asp-validation-for="Alias"></span>
+            <br>
+            <label asp-for="Email"></label>
+            <input asp-for="Email" />
+            <span asp-validation-for="Email"></span>
+            <br>
+            <label asp-for="Password"></label>
+            <input asp-for="Password" />
+            <span asp-validation-for="Password"></span>
+            <br>
+            <label asp-for="ConfirmPW"></label>
+            <input asp-for="ConfirmPW" />
+            <span asp-validation-for="ConfirmPW"></span>
+            <br>
+            <input type="submit">
+        </form>
+    </div>
+    <div id="right">
+        <h1>Login</h1>
+        <form asp-controller="User" asp-action="Login" method="POST">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" />
+            <span asp-validation-for="Email"></span>
+            <br>
+            <label asp-for="Password"></label>
+            <input asp-for="Password" />
+            <span asp-validation-for="Password"></span>
+            <br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
+</body>

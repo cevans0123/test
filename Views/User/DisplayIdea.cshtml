@@ -1,0 +1,66 @@
+@using Ideas.Models
+@model Ideas.Models.Idea
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Like Status</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+            overflow: hidden;
+            margin: 0px 0px 15px 0px;
+        }
+        li {
+            float: right;
+            display: block;
+            padding: 8px;
+            background-color: lightcyan;
+        }
+        td {
+            padding: 4px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="container">
+    <div id="navbar">
+        <ul>
+            <li><a href="/bright_ideas">Home</a></li>
+            <li><a href="/logout">Logout</a></li>
+            <li>Welcome @ViewBag.CurrUser</li>
+        </ul>
+    </div>
+        <h3>@ViewBag.ThisIdea.User.Name said, "@ViewBag.ThisIdea.Post"</h3>
+
+    <table>
+        <tr>
+            <th>Alias</th>
+            <th>Name</th>
+        </tr>
+
+    @foreach(var user in @ViewBag.ThisIdea.Participants)
+        {
+        <tr>
+            <td><a href="/users/@user.UserId">@user.User.Alias</a>&nbsp;</td>
+            <!-- if(@user.User.Name != null)
+            {
+            int count = 1;
+            
+            if (count <= 1)
+            { -->
+            <td>@user.User.Name</td>
+            <!-- } -->
+        </tr>
+        }
+    </table>
+
+</div>
+</body>
+</html>

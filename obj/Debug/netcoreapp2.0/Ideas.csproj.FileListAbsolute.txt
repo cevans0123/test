@@ -1,0 +1,11 @@
+C:\Users\Nauma\desktop\csharp_stack\Ideas\bin\Debug\netcoreapp2.0\Ideas.deps.json
+C:\Users\Nauma\desktop\csharp_stack\Ideas\bin\Debug\netcoreapp2.0\Ideas.runtimeconfig.json
+C:\Users\Nauma\desktop\csharp_stack\Ideas\bin\Debug\netcoreapp2.0\Ideas.runtimeconfig.dev.json
+C:\Users\Nauma\desktop\csharp_stack\Ideas\bin\Debug\netcoreapp2.0\Ideas.dll
+C:\Users\Nauma\desktop\csharp_stack\Ideas\bin\Debug\netcoreapp2.0\Ideas.pdb
+C:\Users\Nauma\desktop\csharp_stack\Ideas\obj\Debug\netcoreapp2.0\Ideas.csprojResolveAssemblyReference.cache
+C:\Users\Nauma\desktop\csharp_stack\Ideas\obj\Debug\netcoreapp2.0\Ideas.csproj.CoreCompileInputs.cache
+C:\Users\Nauma\desktop\csharp_stack\Ideas\obj\Debug\netcoreapp2.0\Ideas.AssemblyInfoInputs.cache
+C:\Users\Nauma\desktop\csharp_stack\Ideas\obj\Debug\netcoreapp2.0\Ideas.AssemblyInfo.cs
+C:\Users\Nauma\desktop\csharp_stack\Ideas\obj\Debug\netcoreapp2.0\Ideas.dll
+C:\Users\Nauma\desktop\csharp_stack\Ideas\obj\Debug\netcoreapp2.0\Ideas.pdb
